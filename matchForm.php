@@ -49,7 +49,7 @@
 			<h2 id="title">enter your match info here</h2>
 		</div>
 		<div class="col-xs-12" style="height:30px;"></div>
-		<form id="register-form" class="container-fluid" method="get" action="matchinfo.php">
+		<form id="register-form" class="container-fluid" method="get" action="matchForm.php">
 			<div class="form-group col-md-6">
 				<label for="firstName">what is the name of the tournament?</label>
 				<input class="form-control required" type="text" id="tournament" name="tournament" placeholder="tournament"/>
