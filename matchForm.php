@@ -26,7 +26,7 @@
                 $characters2 = $_GET['characters2'];
                 try {
                     $iniData = parse_ini_file("data.ini.php");
-                    $database = new PDO('mysql:host=localhost,dbname=test', $iniData['insecure']['user'], $iniData['insecure']['pass']);
+                    $database = new PDO('mysql:host=127.0.0.1;dbname=playground16', $iniData['user'], $iniData['pass']);
                 } catch (PDOEXCEPTION $e) {
                     print($e->getMessage());
                     die();
