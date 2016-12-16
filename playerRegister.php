@@ -66,7 +66,33 @@
             </div>
             <div class="form-group container-fluid">
                 <label for="main">main:</label>
-				<input class="form-control required" type="text" id="main" name="main"></input>
+				<select class="form-control required" id="main" name="main">
+                    <option value="fox">fox</option>
+                    <option value="falco">falco</option>
+                    <option value="marth">marth</option>
+                    <option value="sheik">sheik</option>
+                    <option value="jigglypuff">jigglypuff</option>
+                    <option value="peach">peach</option>
+                    <option value="ice climbers">ice climbers</option>
+                    <option value="captain falcon">captain falcon</option>
+                    <option value="pikachu">pikachu</option>
+                    <option value="samus">samus</option>
+                    <option value="dr. mario">dr. mario</option>
+                    <option value="luigi">luigi</option>
+                    <option value="ganondorf">ganondorf</option>
+                    <option value="mario">mario</option>
+                    <option value="young link">young link</option>
+                    <option value="donkey kong">donkey kong</option>
+                    <option value="link">link</option>
+                    <option value="mr. game and watch">mr. game and watch</option>
+                    <option value="roy">roy</option>
+                    <option value="mewtwo">mewtwo</option>
+                    <option value="zelda">zelda</option>
+                    <option value="ness">ness</option>
+                    <option value="pichu">pichu</option>
+                    <option value="bowser">bowser</option>
+                    <option value="kirby">kirby</option>
+                </select>
 			</div>
             <div class="form-group container-fluid" id="secondary">
                 <label for="secondaries">secondary 1:</label>
