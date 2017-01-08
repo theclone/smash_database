@@ -4,7 +4,7 @@
     <meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link href="/css/bootstrap.min.css" rel="stylesheet"/>
+	<link href="../../css/bootstrap.min.css" rel="stylesheet"/>
 	<title>match info here</title>
 	<style>
 		.error {
@@ -26,7 +26,7 @@
                 $characters2 = $_GET['characters2'];
                 try {
                     $iniData = parse_ini_file("data.ini.php");
-                    $database = new PDO('mysql:host=127.0.0.1;dbname=playground16', $iniData['user'], $iniData['pass']);
+                    $database = new PDO('mysql:host=localhost,dbname=test', $iniData['insecure']['user'], $iniData['insecure']['pass']);
                 } catch (PDOEXCEPTION $e) {
                     print($e->getMessage());
                     die();
@@ -39,7 +39,7 @@
                 $nameInsert->bindParam(':characters2', $characters2);
                 $nameInsert->bindParam(':games2', $games2);
                 $nameInsert->execute();
-                $matchid = $database->query('SELECT ID FROM smash player id\'s ORDER BY DESC')[0];
+                $matchid = $database->query('SELECT ID FROM smash_player_h2h ORDER BY DESC')[0];
                 $nameInsert = $database->prepare('INSERT INTO smash_player_h2h (Match_ID) VALUES (:matchid');
                 $charInsert->execute();
                 print("match recorded");
@@ -86,7 +86,6 @@
 			</div>
 		</form>
 	</div>
-
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script src="../../js/bootstrap.min.js"></script>
 	<script src="../../js/jquery.validate.min.js"></script>
@@ -100,10 +99,12 @@
 			rules: {
 				passConfirm: {
 					equalTo: "#password"
+				}
 			}
-		}
 		});
 	 });
 	</script>
   </body>
 </html>
+
+
