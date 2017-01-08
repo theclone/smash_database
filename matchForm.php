@@ -41,7 +41,6 @@
                 $nameInsert->execute();
                 $matchid = $database->query('SELECT ID FROM smash_player_h2h ORDER BY DESC')[0];
                 $nameInsert = $database->prepare('INSERT INTO smash_player_h2h (Match_ID) VALUES (:matchid');
-                $charInsert->execute();
                 print("match recorded");
             }
         ?>
